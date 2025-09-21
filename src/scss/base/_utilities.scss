@@ -4,6 +4,7 @@
 
 // Import variables
 @use '../abstracts/variables' as *;
+@use 'sass:map';
 
 // Font family utilities
 .font-display { 
@@ -16,48 +17,48 @@
 
 // Font weight utilities
 .font-light { 
-  font-weight: map-get($font-weights, 'light'); 
+  font-weight: map.get($font-weights, 'light'); 
 }
 
 .font-regular { 
-  font-weight: map-get($font-weights, 'regular'); 
+  font-weight: map.get($font-weights, 'regular'); 
 }
 
 .font-medium { 
-  font-weight: map-get($font-weights, 'medium'); 
+  font-weight: map.get($font-weights, 'medium'); 
 }
 
 // Text size utilities
 .text-xs { 
-  font-size: map-get($font-sizes, 'xs'); 
+  font-size: map.get($font-sizes, 'xs'); 
 }
 
 .text-sm { 
-  font-size: map-get($font-sizes, 'sm'); 
+  font-size: map.get($font-sizes, 'sm'); 
 }
 
 .text-base { 
-  font-size: map-get($font-sizes, 'base'); 
+  font-size: map.get($font-sizes, 'base'); 
 }
 
 .text-lg { 
-  font-size: map-get($font-sizes, 'lg'); 
+  font-size: map.get($font-sizes, 'lg'); 
 }
 
 .text-xl { 
-  font-size: map-get($font-sizes, 'xl'); 
+  font-size: map.get($font-sizes, 'xl'); 
 }
 
 .text-2xl { 
-  font-size: map-get($font-sizes, '2xl'); 
+  font-size: map.get($font-sizes, '2xl'); 
 }
 
 .text-3xl { 
-  font-size: map-get($font-sizes, '3xl'); 
+  font-size: map.get($font-sizes, '3xl'); 
 }
 
 .text-4xl { 
-  font-size: map-get($font-sizes, '4xl'); 
+  font-size: map.get($font-sizes, '4xl'); 
 }
 
 // Text color utilities
@@ -92,35 +93,35 @@
 
 // Line height utilities
 .leading-tight { 
-  line-height: map-get($line-heights, 'tight'); 
+  line-height: map.get($line-heights, 'tight'); 
 }
 
 .leading-normal { 
-  line-height: map-get($line-heights, 'normal'); 
+  line-height: map.get($line-heights, 'normal'); 
 }
 
 .leading-relaxed { 
-  line-height: map-get($line-heights, 'relaxed'); 
+  line-height: map.get($line-heights, 'relaxed'); 
 }
 
 // Letter spacing utilities
 .tracking-tight { 
-  letter-spacing: map-get($letter-spacing, 'tight'); 
+  letter-spacing: map.get($letter-spacing, 'tight'); 
 }
 
 .tracking-normal { 
-  letter-spacing: map-get($letter-spacing, 'normal'); 
+  letter-spacing: map.get($letter-spacing, 'normal'); 
 }
 
 .tracking-wide { 
-  letter-spacing: map-get($letter-spacing, 'wide'); 
+  letter-spacing: map.get($letter-spacing, 'wide'); 
 }
 
 // Additional utility classes
 .small, 
 .text-small { 
-  font-size: map-get($font-sizes, 'sm');
-  font-weight: map-get($font-weights, 'light');
+  font-size: map.get($font-sizes, 'sm');
+  font-weight: map.get($font-weights, 'light');
   color: #666;
 }
 
