@@ -1,0 +1,20 @@
+{
+  "name": "canal-street-market",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/scss/main.scss:dist/main.css & live-server --port=3000 --browser=chrome",
+    "build": "sass src/scss/main.scss:dist/mai.css --style=compressed",
+    "sass:watch": "sass --watch src/scss/main.scss:dist/main.css",
+    "sass:build": "sass src/scss/main.scss:dist/main.css --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.92.1",
+    "vite": "^6.3.6"
+  }
+}
