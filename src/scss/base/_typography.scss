@@ -1,5 +1,6 @@
 
 @use '../abstracts/variables' as *;
+@use 'sass:map';
 // ====================================
 // FONT FACE DECLARATIONS
 // ====================================
@@ -54,17 +55,17 @@
   // Base body text
   body {
     font-family: $font-family-body;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'base');
-    line-height: map-get($line-heights, 'normal');
+    font-weight: map.get($font-weights, 'regular');
+    font-size: map.get($font-sizes, 'base');
+    line-height: map.get($line-heights, 'normal');
     color: #444;
   }
   
   // Default headings (will be overridden by specific classes)
   h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-display;
-    font-weight: map-get($font-weights, 'regular');
-    line-height: map-get($line-heights, 'tight');
+    font-weight: map.get($font-weights, 'regular');
+    line-height: map.get($line-heights, 'tight');
     margin-bottom: 1rem;
     color: #111;
   }
@@ -72,9 +73,9 @@
   // Default paragraph styling
   p {
     font-family: $font-family-body;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'base');
-    line-height: map-get($line-heights, 'normal');
+    font-weight: map.get($font-weights, 'regular');
+    font-size: map.get($font-sizes, 'base');
+    line-height: map.get($line-heights, 'normal');
     margin-bottom: 1rem;
     color: #444;
   }
@@ -86,65 +87,73 @@
   // Hero heading: "A new kind of market" - 113px
   .hero-heading {
     font-family: $font-family-display;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'hero-heading-mobile');
-    line-height: map-get($line-heights, 'tight');
+    font-weight: map.get($font-weights, 'regular');
+    font-size: map.get($font-sizes, 'hero-heading-mobile');
+    line-height: map.get($line-heights, 'tight');
     color: #111;
     margin-bottom: 2rem;
     
     @media (min-width: 768px) {
-      font-size: map-get($font-sizes, 'hero-heading');
+      font-size: map.get($font-sizes, 'hero-heading');
     }
   }
   
   // Lead text: Main description - 75px with 86px line height
   .lead-description {
     font-family: $font-family-display;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'lead-text-mobile');
-    line-height: map-get($line-heights, 'lead');
+    font-weight: map.get($font-weights, 'regular');
+    font-size: map.get($font-sizes, 'lead-text-mobile');
+    line-height: map.get($line-heights, 'lead');
     color: #333;
     margin-bottom: 2rem;
     
     @media (min-width: 768px) {
-      font-size: map-get($font-sizes, 'lead-text');
+      font-size: map.get($font-sizes, 'lead-text');
     }
   }
   
   // Section headings: "Market Events" - 72px
   .section-heading {
     font-family: $font-family-display;
-    font-weight: map-get($font-weights, 'regular');
-    font-size: map-get($font-sizes, 'market-events-mobile');
-    line-height: map-get($line-heights, 'tight');
+    font-weight: map.get($font-weights, 'regular');
+    font-size: map.get($font-sizes, 'market-events-mobile');
+    line-height: map.get($line-heights, 'tight');
     color: #111;
     margin-bottom: 1.5rem;
     
     @media (min-width: 768px) {
-      font-size: map-get($font-sizes, 'market-events');
+      font-size: map.get($font-sizes, 'market-events');
     }
   }
   
   // Panel text: "Food, Retail, Community" - 20px
   .panel-text {
     font-family: $font-family-body;
-    font-weight: map-get($font-weights, 'medium');
-    font-size: map-get($font-sizes, 'panel');
-    line-height: map-get($line-heights, 'normal');
+    font-weight: map.get($font-weights, 'extrabold');
+    font-size: map.get($font-sizes, 'panel');
+    line-height: map.get($line-heights, 'normal');
     color: #333;
     text-transform: uppercase;
-    letter-spacing: map-get($letter-spacing, 'wide');
+    letter-spacing: map.get($letter-spacing, 'wide');
+  }
+
+  .chinese-span {
+    font-size: map.get($font-sizes, 'lg'); // Slightly larger
+    font-weight: map.get($font-weights, 'extrabold');
+    text-align: center;
+    margin: 60px 0;
+    color: white;
   }
   
   // Small text and metadata
   small {
-    font-size: map-get($font-sizes, 'xs');
-    font-weight: map-get($font-weights, 'light');
+    font-size: map.get($font-sizes, 'xs');
+    font-weight: map.get($font-weights, 'light');
     color: #666;
   }
   
   strong, b {
-    font-weight: map-get($font-weights, 'medium');
+    font-weight: map.get($font-weights, 'medium');
   }
   
   em, i {

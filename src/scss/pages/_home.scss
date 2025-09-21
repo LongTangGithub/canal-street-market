@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as *;
+
+.layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.home {
+    background-color: #fff;
+    z-index: 10;
+}
+
+.active {
+    width: 88%;
+}
+

@@ -47,6 +47,11 @@ ul {
   list-style: none;
 }
 
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
 img,
 picture,
 video,
@@ -197,12 +202,20 @@ p {
 
 .panel-text {
   font-family: "OggText", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 1.25rem;
   line-height: 1.5;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+
+.chinese-span {
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 60px 0;
+  color: white;
 }
 
 small {
@@ -328,6 +341,75 @@ em, i {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 4%;
+  transition: all 0.5s ease;
+}
+.panel .panel-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.food-panel {
+  background-color: #5ea3ec;
+  z-index: 75;
+}
+.food-panel p {
+  margin-bottom: 30em;
+}
+
+.retail-panel {
+  background-color: #f64444;
+  z-index: 50;
+}
+
+.community-panel {
+  background-color: #ffb400;
+  z-index: 25;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .panel {
+    width: 100% !important;
+    height: 100px;
+    flex-direction: row;
+  }
+  .panel .panel-text,
+  .panel .chinese-span {
+    transform: none;
+    position: static;
+  }
+}
+.layout-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.home {
+  background-color: #fff;
+  z-index: 10;
+}
+
+.active {
+  width: 88%;
 }
 
 /*# sourceMappingURL=main.css.map */
