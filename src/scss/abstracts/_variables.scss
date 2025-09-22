@@ -44,3 +44,31 @@ $letter-spacing: (
   'normal': 0,
   'wide': 0.02em
 );
+
+
+// ====================================
+// PANEL SYSTEM VARIABLES
+// ====================================
+
+$panel-width-collapsed: 4%;
+$panel-width-expanded: 88%;
+$panel-width-mobile: 100%;
+$panel-height-mobile: 100px;
+
+
+$panel-colors: (
+  'food': #5ea3ec,
+  'retail': #f64444,
+  'community': #ffb400,
+  'home': #fff,
+);
+
+$panel-z-index: (
+  'base': 10,            // Home panel
+  'community': 25,      // Community panel
+  'retail': 50,        // Retail panel
+  'food': 75,         // Food panel (HIGHEST)
+  'header': 100      // Header panel
+);
+
+
