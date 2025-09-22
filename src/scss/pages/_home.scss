@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use 'sass:map';
 
 .layout-container {
     display: flex;
@@ -8,11 +9,11 @@
 }
 
 .home {
-    background-color: #fff;
-    z-index: 10;
+    background-color: map.get($panel-colors, 'home');
+    z-index: map.get($panel-z-index, 'base');
 }
 
 .active {
-    width: 88%;
+    width: $panel-width-expanded;
 }
 
