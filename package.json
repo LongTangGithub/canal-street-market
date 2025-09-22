@@ -1,6 +1,7 @@
 {
   "name": "canal-street-market",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "sass --watch src/scss/main.scss:dist/main.css & live-server --port=3000 --browser=chrome",
